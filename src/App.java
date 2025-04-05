@@ -12,7 +12,7 @@ public class App {
        //Creation de la fenetre
        JFrame fenetre  = new JFrame("Pac Man");
        //rendre la fenetre visible
-       fenetre.setVisible(true);
+       //fenetre.setVisible(true);
        //mettre la taille de la fenetre
        fenetre.setSize(largeurFenetre, longueureFenetre);
        //Ouvrir la fenetre dans un endroit visible et centré
@@ -21,6 +21,15 @@ public class App {
        fenetre.setResizable(false);
        //Si l'utilisateur veut fermer la fenetre lorque il clique sur x
        fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Créer une instance de PacMan
+       PacMan pacmanJeu = new PacMan();
+
+        // Ajouter pacmanJeu à la fenêtre
+       fenetre.add(pacmanJeu);
+       fenetre.pack();
+       fenetre.setVisible(true);
+
 
 
     }
